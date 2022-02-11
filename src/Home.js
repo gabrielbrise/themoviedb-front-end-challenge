@@ -1,5 +1,8 @@
-import './Home.css';
-import { useFetchAllMovies } from './rest';
+import PosterCard from 'components/PosterCard'
+import './Home.css'
+import { useFetchAllMovies } from './rest'
+import Section from 'components/Section'
+import GenreCard from 'components/GenreCard'
 
 /**
  * You have the option to use either REST
@@ -11,32 +14,65 @@ import { useFetchAllMovies } from './rest';
  * GraphQL.
  **/
 const Home = () => {
-  const { data, loading } = useFetchAllMovies();
+  const { data, loading } = useFetchAllMovies()
+
+  const genres = [
+    { title: 'Comedy', url: '' },
+    { title: 'Action', url: '' },
+    { title: 'Drama', url: '' },
+    { title: 'True Crime', url: '' }
+  ]
 
   return (
-    <div className="home-container">
-      <h1>Popular Movies</h1>
-
-      {loading ? (
-        <div>Loading movies...</div>
-      ) : (
-        <ol>
-          {data.map(movie => (
-            <li key={movie.id}>
-              {movie.title}
-              <ul>
-                <li>Release Date: {movie.releaseDate}</li>
-                <li>Description: {movie.overview}</li>
-                <li>Average Vote: {movie.voteAverage}</li>
-                <li>Total Votes: {movie.voteCount}</li>
-                <li>Genres: {movie.genres.join(', ')}</li>
-              </ul>
-            </li>
+    <div>
+      <div style={{ paddingTop: '4em' }}>
+        <Section title="Movies" subtitle="TOP 5">
+          {loading ? (
+            <div>Loading movies...</div>
+          ) : (
+            <ol
+              style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center'
+              }}
+            >
+              {data.slice(0, 5).map(movie => (
+                <PosterCard image={movie.posterPath} id={movie.id} key={movie.id} />
+              ))}
+            </ol>
+          )}
+        </Section>
+        <Section
+          title="Browse"
+          subtitle="by Genre"
+          style={{ backgroundColor: 'rgb(244, 245, 251)' }}
+        >
+          {genres.map(({ title }, index) => (
+            <GenreCard title={title} key={`${title}-${index}`} />
           ))}
-        </ol>
-      )}
+        </Section>
+        <Section title="Movies" subtitle="Browse All">
+          {loading ? (
+            <div>Loading movies...</div>
+          ) : (
+            <ol
+              style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center'
+              }}
+            >
+              {data.slice(0, 5).map(movie => (
+                <PosterCard image={movie.posterPath} id={movie.id} key={movie.id} />
+              ))}
+            </ol>
+          )}
+        </Section>
+      </div>
     </div>
-  );
-};
 
-export default Home;
+  )
+}
+
+export default Home

@@ -1,5 +1,8 @@
-import Home from './Home';
-import { Route, Switch } from 'react-router-dom';
+import Home from './Home'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import Movie from 'pages/Movie'
+import Header from 'components/Header'
+import styled from 'styled-components'
 
 /**
  * This function is used to simulate performance benchmarking.
@@ -8,8 +11,8 @@ import { Route, Switch } from 'react-router-dom';
  * function should be called only on first page load.
  **/
 export const trackInitialLoad = () => {
-  console.log('First page load');
-};
+  console.log('First page load')
+}
 
 /**
  * This function is used to simulate performance benchmarking.
@@ -19,15 +22,29 @@ export const trackInitialLoad = () => {
  * loaded.
  **/
 export const trackPageCompletedLoading = () => {
-  console.log('Page done loading');
-};
+  console.log('Page done loading')
+}
 
 const App = () => {
   return (
-    <Switch>
-      <Route path="/" exact component={Home} />
-    </Switch>
-  );
-};
+    <Router>
+      <Header />
+      <Body>
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/:movie" component={Movie} />
+          <Route path="/genre/:genre" exact component={Home} />
+          <Route path="/all/:movie" exact component={Home} />
+        </Switch>
+      </Body>
+    </Router>
+  )
+}
 
-export default App;
+export default App
+
+const Body = styled.div`
+  padding-top: calc(72px + 2em);
+  padding-left: 2em;
+  padding-right: 2em;
+`
