@@ -22,12 +22,16 @@
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
+    "styled-components": "^5.3.3",
     "web-vitals": "^0.2.4"
   },
   "devDependencies": {
+    "babel-plugin-inline-react-svg": "^2.0.1",
+    "babel-plugin-transform-scss": "^1.1.0",
     "concurrently": "^3.1.0",
     "prettier": "^1.19.1",
     "react-scripts": "0.7.0",
+    "sass": "^1.49.7",
     "top-movies-json": "git+https://github.com/podium-eng-recruiting/podium-fe-challenge-support-2021.git"
   },
   "scripts": {
@@ -38,7 +42,8 @@
   },
   "prettier": {
     "singleQuote": true,
-    "trailingComma": "none"
+    "trailingComma": "none",
+    "semi": false
   },
   "eslintConfig": {
     "extends": [

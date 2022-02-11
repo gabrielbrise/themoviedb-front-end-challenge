@@ -1,0 +1,190 @@
+:root {
+  --color-primary: #2245e1;
+  --text-light-gray: #bbbaba;
+  --text-gray: #63727d;
+}
+
+[data-reactroot] {
+  height: 100% !important;
+}
+
+html,
+body,
+#app,
+#app > div {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  background: white;
+  color: #333;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+// TEXT
+
+.text-light-gray {
+  color: var(--text-light-gray);
+}
+
+.text-gray {
+  color: var(--text-gray);
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+// FLEXBOX
+
+.d-flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+// MARGIN
+
+@for $i from 0 through 7 {
+  .m-#{$i} {
+    margin: #{$i * 8}px;
+  }
+}
+
+@for $i from 0 through 7 {
+  .mv-#{$i} {
+    margin-top: #{$i * 8}px;
+    margin-bottom: #{$i * 8}px;
+  }
+}
+
+@for $i from 0 through 7 {
+  .mh-#{$i} {
+    margin-left: #{$i * 8}px;
+    margin-right: #{$i * 8}px;
+  }
+}
+
+@for $i from 0 through 7 {
+  .mt-#{$i} {
+    margin-top: #{$i * 8}px;
+  }
+}
+
+@for $i from 0 through 7 {
+  .mr-#{$i} {
+    margin-right: #{$i * 8}px;
+  }
+}
+
+@for $i from 0 through 7 {
+  .mb-#{$i} {
+    margin-bottom: #{$i * 8}px;
+  }
+}
+
+@for $i from 0 through 7 {
+  .ml-#{$i} {
+    margin-left: #{$i * 8}px;
+  }
+}
+
+// PADDINGS
+
+@for $i from 0 through 7 {
+  .p-#{$i} {
+    padding: #{$i * 8}px;
+  }
+}
+
+@for $i from 0 through 7 {
+  .pv-#{$i} {
+    padding-top: #{$i * 8}px;
+    padding-bottom: #{$i * 8}px;
+  }
+}
+
+@for $i from 0 through 7 {
+  .ph-#{$i} {
+    padding-left: #{$i * 8}px;
+    padding-right: #{$i * 8}px;
+  }
+}
+
+@for $i from 0 through 7 {
+  .pt-#{$i} {
+    padding-top: #{$i * 8}px;
+  }
+}
+
+@for $i from 0 through 7 {
+  .pr-#{$i} {
+    padding-right: #{$i * 8}px;
+  }
+}
+
+@for $i from 0 through 7 {
+  .pb-#{$i} {
+    padding-bottom: #{$i * 8}px;
+  }
+}
+
+@for $i from 0 through 7 {
+  .pl-#{$i} {
+    padding-left: #{$i * 8}px;
+  }
+}
+
+// FONT SIZE
+
+@for $i from 0 through 7 {
+  $font-min-size: 8;
+  @if $i < 2 {
+    .fs-#{$i} {
+      font-size: #{$font-min-size + ($i * 4)}px;
+    }
+  } @else if $i == 2 {
+    .fs-2 {
+      font-size: #{$font-min-size + ($i * 4)}px;
+    }
+    .fs-3 {
+      font-size: #{$font-min-size + ($i * 8)}px;
+    }
+  } @else {
+    .fs-#{$i + 1} {
+      font-size: #{$font-min-size + ($i * 8)}px;
+    }
+  }
+}
+
+// FONT WEIGHT
+
+.fw-normal {
+  font-weight: normal;
+}
+
+.fw-bold {
+  font-weight: bold;
+}
+
+// HEIGHT
+
+.h-100 {
+  height: 100%;
+}
+
+// MISC
+
+.text-decoration-none {
+  text-decoration: none;
+}
