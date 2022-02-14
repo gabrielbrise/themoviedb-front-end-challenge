@@ -1,8 +1,9 @@
 import PosterCard from 'components/PosterCard'
 import './Home.css'
 import { useFetchAllMovies } from './rest'
-import Section from 'components/Section'
-import GenreCard from 'components/GenreCard'
+import Section from 'components/common/Section'
+import GenreSection from 'components/sections/GenreSection'
+import Top5Section from 'components/sections/Top5Section'
 
 /**
  * You have the option to use either REST
@@ -14,44 +15,13 @@ import GenreCard from 'components/GenreCard'
  * GraphQL.
  **/
 const Home = () => {
-  const { data, loading } = useFetchAllMovies()
-
-  const genres = [
-    { title: 'Comedy', url: '' },
-    { title: 'Action', url: '' },
-    { title: 'Drama', url: '' },
-    { title: 'True Crime', url: '' }
-  ]
+  const { data, loading, genres } = useFetchAllMovies()
 
   return (
     <div>
       <div style={{ paddingTop: '4em' }}>
-        <Section title="Movies" subtitle="TOP 5">
-          {loading ? (
-            <div>Loading movies...</div>
-          ) : (
-            <ol
-              style={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center'
-              }}
-            >
-              {data.slice(0, 5).map(movie => (
-                <PosterCard image={movie.posterPath} id={movie.id} key={movie.id} />
-              ))}
-            </ol>
-          )}
-        </Section>
-        <Section
-          title="Browse"
-          subtitle="by Genre"
-          style={{ backgroundColor: 'rgb(244, 245, 251)' }}
-        >
-          {genres.map(({ title }, index) => (
-            <GenreCard title={title} key={`${title}-${index}`} />
-          ))}
-        </Section>
+        <Top5Section loading={loading} data={data} />
+        <GenreSection genres={genres} />
         <Section title="Movies" subtitle="Browse All">
           {loading ? (
             <div>Loading movies...</div>

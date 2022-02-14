@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 const GenreCard = ({ title }) => (
-    <Container>
-        <h3><b>{title}</b></h3>
-    </Container>
+	<Container>
+		<h3><b>{title}</b></h3>
+	</Container>
 )
 
 export default GenreCard;

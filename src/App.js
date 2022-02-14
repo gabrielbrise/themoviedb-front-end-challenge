@@ -44,7 +44,6 @@ const App = () => {
 export default App
 
 const Body = styled.div`
-  padding-top: calc(72px + 2em);
   padding-left: 2em;
   padding-right: 2em;
 `
