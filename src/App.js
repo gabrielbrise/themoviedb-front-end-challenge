@@ -1,8 +1,8 @@
-import Home from './Home'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import Home from 'pages/Home'
 import Movie from 'pages/Movie'
+import Genre from 'pages/Genre'
 import Header from 'components/Header'
-import styled from 'styled-components'
 
 /**
  * This function is used to simulate performance benchmarking.
@@ -29,21 +29,15 @@ const App = () => {
   return (
     <Router>
       <Header />
-      <Body>
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/:movie" component={Movie} />
-          <Route path="/genre/:genre" exact component={Home} />
-          <Route path="/all/:movie" exact component={Home} />
-        </Switch>
-      </Body>
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/top-5/:movie" component={Movie} />
+        <Route path="/genre/:genre/:movie" component={Movie} />
+        <Route path="/genre/:genre" component={Genre} />
+        <Route path="/all/:movie" component={Movie} />
+      </Switch>
     </Router>
   )
 }
 
 export default App
-
-const Body = styled.div`
-  padding-left: 2em;
-  padding-right: 2em;
-`

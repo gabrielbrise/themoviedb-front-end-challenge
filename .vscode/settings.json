@@ -1,4 +1,7 @@
 {
   "editor.formatOnSave": true,
-  "prettier.semi": false
+  "prettier.semi": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.detectIndentation": false,
+  "editor.tabSize": 2
 }

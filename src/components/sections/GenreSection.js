@@ -1,32 +1,25 @@
 import React from 'react';
-import GenreCard from '../GenreCard'
+import GenreCard from '../cards/GenreCard'
 import Section from '../common/Section'
 import Glide from '../common/Glide'
+import { BG_WHITE } from '../../constants/css'
 
 const GenreSection = ({ genres }) => {
+  if (!genres.length) return null
 
-    const parsedGenres = genres.map(genre => ({
-        title: genre,
-        url: `/${genre.replace(/\s/g, '-').toString().toLowerCase()}`
-    }))
-
-    console.log('genres', parsedGenres)
-
-    if (!genres.length) return null
-
-    return (
-        <Section
-            title="Browse"
-            subtitle="by Genre"
-            style={{ backgroundColor: 'rgb(244, 245, 251)' }}
-        >
-            <Glide>
-                {parsedGenres.map(({ title, url }, index) => (
-                    <GenreCard title={title} key={`${url}-${index}`} />
-                ))}
-            </Glide>
-        </Section>
-    )
+  return (
+    <Section
+      title="Browse"
+      subtitle="by Genre"
+      style={{ backgroundColor: BG_WHITE }}
+    >
+      <Glide id='genre-glide'>
+        {genres.map(({ title, url }, index) => (
+          <GenreCard title={title} key={`${url}-${index}`} url={`/genre/${url}`} />
+        ))}
+      </Glide>
+    </Section>
+  )
 }
 
 export default GenreSection

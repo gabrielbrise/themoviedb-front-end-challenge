@@ -6,8 +6,10 @@
 
 :root {
   --color-primary: #2245e1;
+  --bg-white: #f4f5fb;
   --text-light-gray: #bbbaba;
   --text-gray: #63727d;
+  --text-dark: #393939;
 }
 
 [data-reactroot] {
@@ -29,6 +31,15 @@ body {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+ol {
+  padding-left: 0;
+}
+
 // TEXT
 
 .text-light-gray {
@@ -45,6 +56,22 @@ body {
 
 .justify-content-center {
   justify-content: center;
+}
+
+.mobile-overflow-x-scroll {
+  @media (max-width: 480px) {
+    overflow-x: scroll;
+  }
+}
+
+.mobile-flex-direction-column {
+  @media (max-width: 480px) {
+    flex-direction: column;
+  }
+}
+
+.bg-white {
+  background-color: var(--bg-white);
 }
 
 // FLEXBOX
@@ -77,93 +104,93 @@ body {
 
 // MARGIN
 
-@for $i from 0 through 7 {
+@for $i from 0 through 9 {
   .m-#{$i} {
-    margin: #{$i * 8}px;
+    margin: #{$i * 4}px;
   }
 }
 
-@for $i from 0 through 7 {
+@for $i from 0 through 9 {
   .mv-#{$i} {
-    margin-top: #{$i * 8}px;
-    margin-bottom: #{$i * 8}px;
+    margin-top: #{$i * 4}px;
+    margin-bottom: #{$i * 4}px;
   }
 }
 
-@for $i from 0 through 7 {
+@for $i from 0 through 9 {
   .mh-#{$i} {
-    margin-left: #{$i * 8}px;
-    margin-right: #{$i * 8}px;
+    margin-left: #{$i * 4}px;
+    margin-right: #{$i * 4}px;
   }
 }
 
-@for $i from 0 through 7 {
+@for $i from 0 through 9 {
   .mt-#{$i} {
-    margin-top: #{$i * 8}px;
+    margin-top: #{$i * 4}px;
   }
 }
 
-@for $i from 0 through 7 {
+@for $i from 0 through 9 {
   .mr-#{$i} {
-    margin-right: #{$i * 8}px;
+    margin-right: #{$i * 4}px;
   }
 }
 
-@for $i from 0 through 7 {
+@for $i from 0 through 9 {
   .mb-#{$i} {
-    margin-bottom: #{$i * 8}px;
+    margin-bottom: #{$i * 4}px;
   }
 }
 
-@for $i from 0 through 7 {
+@for $i from 0 through 9 {
   .ml-#{$i} {
-    margin-left: #{$i * 8}px;
+    margin-left: #{$i * 4}px;
   }
 }
 
 // PADDINGS
 
-@for $i from 0 through 7 {
+@for $i from 0 through 9 {
   .p-#{$i} {
-    padding: #{$i * 8}px;
+    padding: #{$i * 4}px;
   }
 }
 
-@for $i from 0 through 7 {
+@for $i from 0 through 9 {
   .pv-#{$i} {
-    padding-top: #{$i * 8}px;
-    padding-bottom: #{$i * 8}px;
+    padding-top: #{$i * 4}px;
+    padding-bottom: #{$i * 4}px;
   }
 }
 
-@for $i from 0 through 7 {
+@for $i from 0 through 9 {
   .ph-#{$i} {
-    padding-left: #{$i * 8}px;
-    padding-right: #{$i * 8}px;
+    padding-left: #{$i * 4}px;
+    padding-right: #{$i * 4}px;
   }
 }
 
-@for $i from 0 through 7 {
+@for $i from 0 through 9 {
   .pt-#{$i} {
-    padding-top: #{$i * 8}px;
+    padding-top: #{$i * 4}px;
   }
 }
 
-@for $i from 0 through 7 {
+@for $i from 0 through 9 {
   .pr-#{$i} {
-    padding-right: #{$i * 8}px;
+    padding-right: #{$i * 4}px;
   }
 }
 
-@for $i from 0 through 7 {
+@for $i from 0 through 9 {
   .pb-#{$i} {
-    padding-bottom: #{$i * 8}px;
+    padding-bottom: #{$i * 4}px;
   }
 }
 
-@for $i from 0 through 7 {
+@for $i from 0 through 9 {
   .pl-#{$i} {
-    padding-left: #{$i * 8}px;
+    padding-left: #{$i * 4}px;
   }
 }
 
@@ -171,6 +198,7 @@ body {
 
 @for $i from 0 through 7 {
   $font-min-size: 8;
+
   @if $i < 2 {
     .fs-#{$i} {
       font-size: #{$font-min-size + ($i * 4)}px;
@@ -207,6 +235,15 @@ body {
 
 .w-100 {
   width: 100%;
+}
+
+// ANIMATIONS
+
+.hover-zoom {
+  transition: transform 0.2s ease;
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
 // MISC
