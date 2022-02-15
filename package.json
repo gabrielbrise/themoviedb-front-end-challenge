@@ -40,7 +40,7 @@
   "scripts": {
     "start": "PORT=2021 ./node_modules/.bin/concurrently \"cd ./server/top-movies-json && babel-node index.js\" \"react-scripts start\"",
     "build": "react-scripts build",
-    "heroku-prebuild": "cd server && npm install && cd ../ && yarn install",
+    "heroku-prebuild": "npm install --prefix server",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
