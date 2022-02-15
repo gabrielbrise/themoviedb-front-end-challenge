@@ -9,11 +9,12 @@ const GenreSection = ({ genres }) => {
 
   return (
     <Section
+      id="genre"
       title="Browse"
       subtitle="by Genre"
       style={{ backgroundColor: BG_WHITE }}
     >
-      <Glide id='genre-glide'>
+      <Glide id='genre' devices={['tablet', 'desktop']}>
         {genres.map(({ title, url }, index) => (
           <GenreCard title={title} key={`${url}-${index}`} url={`/genre/${url}`} />
         ))}

@@ -34,7 +34,7 @@
   },
   "scripts": {
     "start": "babel-node ./src/server/index.js",
-    "dev": "PORT=2021 concurrently \"cd ./src && babel-node server/index.js\" \"react-scripts start\"",
+    "dev": "concurrently \"cd ./src && babel-node server/index.js\" \"react-scripts start\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

@@ -1,7 +1,5 @@
 # Front-end Exercise
 
-Thank you for taking the time to complete this assessment. This application contains the necessary starting grounds for you to complete the tasks as outlined below. Please take as much time as you feel is necessary to demonstrate your ability. Unless otherwise stated, you are expected to document and test along the way as you see fit.
-
 ## Project Description
 
 This application matches design mock-ups that were given as part of a challenge to showcase front-end skills.
@@ -55,7 +53,7 @@ const App = () => {
 
 - Simple lazy-loading implementation while scrolling down;
 - Hover subtle zooms movie card for a better UX;
-- Responsive design for mobile and desktop devices;
+- Responsive design for mobile and desktop devices, include conditional carousel slide-view for specific devices;
 
 ## Setup and installation
 

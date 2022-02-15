@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Section = ({ title, subtitle, style, HeaderComponent, children }) => (
-  <Container style={style}>
+const Section = ({ id, title, subtitle, style, HeaderComponent, children }) => (
+  <Container id={id} style={style}>
     <StyledHeader className="d-flex justify-content-space-between align-items-center pl-2">
       <Header title={title} subtitle={subtitle} />
       {HeaderComponent && <HeaderComponent />}
@@ -24,7 +24,9 @@ const Header = ({ title, subtitle }) => (
 
 const Container = styled.section`
     padding: 3em 8% 3em;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: visible;
+    max-width: 100vw;
 `
 
 const StyledHeader = styled.div`
@@ -39,8 +41,7 @@ const ChildrenContainer = styled.div`
     padding-top: 16px;
     justify-content: left;
     align-items: center;
-    max-width: 100vw;
-    @media(max-width: 720px) {
+    @media(max-width: 800px) {
       overflow-x: scroll;
     }
 `
