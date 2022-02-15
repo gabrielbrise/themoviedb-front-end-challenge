@@ -11742,8 +11742,9 @@ toidentifier@1.0.1:
   resolved "https://registry.npmjs.org/toidentifier/-/toidentifier-1.0.1.tgz"
   integrity sha512-o5sSPKEkg/DIQNmH43V0/uerLrpzVedkUh8tGNvaeXpfpuwjKenlSox/2O/BTlZUtEe+JG7s5YhEz608PlAHRA==
 
-top-movies-json@./src/server:
+"top-movies-json@git+https://github.com/podium-eng-recruiting/podium-fe-challenge-support-2021.git":
   version "1.0.0"
+  resolved "git+https://github.com/podium-eng-recruiting/podium-fe-challenge-support-2021.git#ec431dee042e776cd0ddcca85804806a135cc63b"
   dependencies:
     "@babel/core" "^7.12.9"
     "@babel/node" "^7.12.6"
