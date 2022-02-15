@@ -5,10 +5,12 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 import { onError } from 'apollo-link-error';
 import { withClientState } from 'apollo-link-state';
 
+const GRAPHQL_API_ROOT_ENDPOINT = process.env.GRAPHQL_API_ROOT_ENDPOINT || 'http://localhost:2020/graphql'
+
 const memoryCache = new InMemoryCache();
 
 const httpLink = createHttpLink({
-  uri: 'http://localhost:2020/graphql'
+  uri: GRAPHQL_API_ROOT_ENDPOINT
 });
 
 const stateLink = withClientState({

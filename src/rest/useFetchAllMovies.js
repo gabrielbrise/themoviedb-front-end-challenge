@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { maxVoteCount, filterUnpopularMovies, sortByVoteAverage } from '../utils/movies'
 
-const REST_API_ROOT_ENDPOINT = 'http://localhost:2020/api';
+const REST_API_ROOT_ENDPOINT = process.env.REST_API_ROOT_ENDPOINT || 'http://localhost:2020/api';
 
 const useFetchMovies = () => {
   const [data, setData] = useState([]);
