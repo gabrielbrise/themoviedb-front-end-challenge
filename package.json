@@ -28,7 +28,8 @@
     "react-select": "^5.2.2",
     "styled-components": "^5.3.3",
     "uuid": "^8.3.2",
-    "web-vitals": "^0.2.4"
+    "web-vitals": "^0.2.4",
+    "top-movies-json": "./src/server"
   },
   "devDependencies": {
     "babel-plugin-inline-react-svg": "^2.0.1",
