@@ -29,7 +29,7 @@
     "styled-components": "^5.3.3",
     "uuid": "^8.3.2",
     "web-vitals": "^0.2.4",
-    "top-movies-json": "./src/server"
+    "top-movies-json": "git+https://github.com/podium-eng-recruiting/podium-fe-challenge-support-2021.git"
   },
   "devDependencies": {
     "babel-plugin-inline-react-svg": "^2.0.1",
