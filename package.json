@@ -35,11 +35,10 @@
     "concurrently": "^3.1.0",
     "prettier": "^1.19.1",
     "react-scripts": "0.7.0",
-    "sass": "^1.49.7",
-    "top-movies-json": "git+https://github.com/podium-eng-recruiting/podium-fe-challenge-support-2021.git"
+    "sass": "^1.49.7"
   },
   "scripts": {
-    "start": "PORT=2021 ./node_modules/.bin/concurrently \"cd ./node_modules/top-movies-json && babel-node index.js\" \"react-scripts start\"",
+    "start": "PORT=2021 ./node_modules/.bin/concurrently \"cd ./server/top-movies-json && babel-node index.js\" \"react-scripts start\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
