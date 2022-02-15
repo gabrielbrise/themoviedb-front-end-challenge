@@ -51,7 +51,7 @@ const TopMoviesViewDetails = ({ movieId, isSelected }) => {
   return (
     <div className="d-flex justify-content-space-between flex-direction-column">
       {isSelected &&
-        <div className="p-1">
+        <div className="p-4">
           <Button url={`top-5/${movieId}`}>View Details</Button>
         </div>}
     </div>
