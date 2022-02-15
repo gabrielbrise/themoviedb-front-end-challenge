@@ -1,5 +1,9 @@
 # Front-end Exercise
 
+You can check a live demo of the project here:
+
+<https://themoviedb-front-end-challenge.herokuapp.com/>
+
 ## Project Description
 
 This application matches design mock-ups that were given as part of a challenge to showcase front-end skills.
