@@ -6,6 +6,7 @@ import Icon from './common/Icon'
 
 const MovieInfo = ({ movie }) => {
   if (!movie) return null
+
   return (
     <Container>
       <div className="d-flex justify-content-center mobile-flex-direction-column">
@@ -20,7 +21,7 @@ const MovieInfo = ({ movie }) => {
           {movie.overview && <MovieOverview overview={movie.overview} />}
         </div>
       </div>
-      <CastInfo cast={movie.cast} />
+      {movie.cast && !!movie.cast.length && <CastInfo cast={movie.cast} />}
     </Container>
   )
 }
