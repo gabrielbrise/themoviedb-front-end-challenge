@@ -1,6 +1,8 @@
 # Front-end Exercise
 
-Thank you for taking the time to complete this assessment. This application contains the necessary starting grounds for you to complete the tasks as outlined below. Please take as much time as you feel is necessary to demonstrate your ability. Unless otherwise stated, you are expected to document and test along the way as you see fit.
+You can check a live demo of the project here:
+
+<https://themoviedb-front-end-challenge.herokuapp.com/>
 
 ## Project Description
 
@@ -55,7 +57,7 @@ const App = () => {
 
 - Simple lazy-loading implementation while scrolling down;
 - Hover subtle zooms movie card for a better UX;
-- Responsive design for mobile and desktop devices;
+- Responsive design for mobile and desktop devices, include conditional carousel slide-view for specific devices;
 
 ## Setup and installation
 

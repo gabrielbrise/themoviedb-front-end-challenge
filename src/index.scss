@@ -58,6 +58,10 @@ ol {
   justify-content: center;
 }
 
+.overflow-x-scroll {
+  overflow-x: scroll;
+}
+
 .mobile-overflow-x-scroll {
   @media (max-width: 480px) {
     overflow-x: scroll;
