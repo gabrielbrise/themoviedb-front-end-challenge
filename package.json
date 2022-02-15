@@ -39,7 +39,9 @@
     "sass": "^1.49.7"
   },
   "scripts": {
-    "start": "PORT=2021 concurrently \"cd ./node_modules/top-movies-json && babel-node index.js\" \"serve build\"",
+    "start": "concurrently \"npm:react-server\" \"npm:json-server\"",
+    "react-server": "serve build",
+    "json-server": "cd ./node_modules/top-movies-json && babel-node index.js",
     "dev": "PORT=2021 concurrently \"cd ./node_modules/top-movies-json && babel-node index.js\" \"react-scripts start\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
