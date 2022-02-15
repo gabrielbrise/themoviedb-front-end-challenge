@@ -38,7 +38,7 @@
     "sass": "^1.49.7"
   },
   "scripts": {
-    "start": "PORT=2021 concurrently \"cd ./src/server/ && babel-node index.js\" \"react-scripts start\"",
+    "start": "PORT=2021 concurrently \"cd ./node_modules/top-movies-json && babel-node index.js\" \"react-scripts start\"",
     "build": "react-scripts build",
     "heroku-prebuild": "yarn install --prefix ./src/server",
     "test": "react-scripts test",
