@@ -13,7 +13,7 @@ This application matches design mock-ups that were given as part of a challenge 
 Top 5 movies section shows the movies with the best average in the database that pass a certain threshold to avoid unpopular movies with few votes but high average to top the list.
 
 - `maxVoteCount` takes the movie with the largest amount of votes to use as base for most popular movie (in terms of voting).
-- `VOTE_COUNT_THRESHOLD = 0.2` servers to filter out movies that have less than 20% of the vote count of the `maxVoteCount`.
+- `VOTE_COUNT_THRESHOLD = 0.2` serves to filter out movies that have less than 20% of the vote count of the `maxVoteCount`.
 
 ```js
 // src\rest\useFetchAllMovies.js
